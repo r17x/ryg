@@ -7,7 +7,6 @@ import {
   waitForElement,
   Simulate,
 } from 'react-testing-library'
-import 'jest-dom/extend-expect'
 
 Object.assign(global, {
   React,
