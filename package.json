@@ -3,23 +3,42 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.2.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.3"
+    "react-scripts": "2.1.3",
+    "reactstrap": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cross-env NODE_PATH=src/ react-scripts test --env=jsdom --coverage",
+    "test:dev": "cross-env NODE_PATH=src/ react-scripts test --env=jsdom --verbose --watch",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-jest": "^22.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^1.3.1",
+    "jest-dom": "^3.0.1",
+    "lint-staged": "^8.1.1",
+    "prettier": "^1.16.3",
+    "react-testing-library": "^5.4.4"
+  }
 }
