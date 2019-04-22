@@ -1,9 +1,5 @@
 {
   "extends": [
-    "config:base"
+    "@ri7nz:js-app"
   ],
-  "packageRules": [{
-    "depTypeList": ["devDependencies"],
-    "automerge": true
-  }]
 }
